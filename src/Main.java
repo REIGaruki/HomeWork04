@@ -60,5 +60,21 @@ public class Main {
                 }
             }
         }
+        //task 6
+        int passengers = 60;//входные данные
+        int carriageCapacity = 102;
+        int carriageSeats = 60;
+        int carriageStands = carriageCapacity - carriageSeats;
+        int freeSeats = carriageSeats - passengers;
+        int freeStands = carriageCapacity - passengers;
+        if (freeSeats > 0) {
+            System.out.println("В вагоне есть свободные места: " + freeSeats + " сидячих и "+ carriageStands + " стоячих");
+        } else {
+            if (freeStands > 0) {
+                System.out.println("В вагоне есть свободные места: " + freeStands + " стоячих");
+            } else {
+                System.out.println("В вагоне свободных мест нет");
+            }
+        }
     }
 }
