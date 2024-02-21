@@ -76,5 +76,18 @@ public class Main {
                 System.out.println("В вагоне свободных мест нет");
             }
         }
+        //task 7
+        int one = 28_937_198;//входные данные
+        int two = 9_239_857;//входные данные
+        int three = 92_837_297;//входные данные
+        if ((one > two) && (one > three)) {
+            System.out.println("One is the biggest");
+        } else {
+            if (two > three) {
+                System.out.println("Two is the biggest");
+            } else {
+                System.out.println("Three is the biggest");
+            }
+        }
     }
 }
