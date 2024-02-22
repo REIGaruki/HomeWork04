@@ -29,65 +29,60 @@ public class Main {
             System.out.println("Если скорость " + speed+ " км/ч, то можно ездить спокойно");
         }
         //task 4
-        age = 1;//входные данные
+        age = 2;//входные данные
         if ((age >= 2) && (age < 7)) {
             System.out.println("Если возраст человека равен " + age + " то ему нужно ходить в детский сад");
-        } else {
-            if ((age >= 7) && (age < 18)) {
-                System.out.println("Если возраст человека равен " + age + " то ему нужно ходить в школу");
-            } else {
-                if ((age >= 18) && (age <= 24)) {
-                    System.out.println("Если возраст человека равен " + age + " то ему нужно ходить в университет");
-                } else {
-                    if (age > 24) {
-                        System.out.println("Если возраст человека равен " + age + " то ему нужно ходить на работу");
-                    } else {
-                        System.out.println("Если возраст человека равен " + age + " то он еще не умеет ходить");
-                    }
-                }
+        }
+        if ((age >= 7) && (age < 18)) {
+            System.out.println("Если возраст человека равен " + age + " то ему нужно ходить в школу");
             }
+        if ((age >= 18) && (age <= 24)) {
+            System.out.println("Если возраст человека равен " + age + " то ему нужно ходить в университет");
+                }
+        if (age > 24) {
+            System.out.println("Если возраст человека равен " + age + " то ему нужно ходить на работу");
+        }
+        if (age < 2) {
+            System.out.println("Если возраст человека равен " + age + " то он еще не умеет ходить");
         }
         //task 5
         age = 9;//входные данные
         if (age < 5) {
             System.out.println("Если возраст ребенка равен " + age + " то он не может кататься на аттракционе");
-        } else {
-            if ((age >= 5) && (age <= 14)) {
-                System.out.println("Если возраст ребенка равен " + age + " то он может кататься только в сопровождении взрослого");
-            } else {
-                if (age > 14) {
-                    System.out.println("Если возраст ребенка равен " + age + " то он может кататься без сопровождения взрослого");
-                }
-            }
+        }
+       if (age > 14) {
+            System.out.println("Если возраст ребенка равен " + age + " то он может кататься без сопровождения взрослого");
+        }
+        if ((age >= 5) && (age <= 14)) {
+            System.out.println("Если возраст ребенка равен " + age + " то он может кататься только в сопровождении взрослого");
         }
         //task 6
-        int passengers = 60;//входные данные
+        int passengers = 59;//входные данные
         int carriageCapacity = 102;
         int carriageSeats = 60;
-        int carriageStands = carriageCapacity - carriageSeats;
-        int freeSeats = carriageSeats - passengers;
-        int freeStands = carriageCapacity - passengers;
-        if (freeSeats > 0) {
-            System.out.println("В вагоне есть свободные места: " + freeSeats + " сидячих и "+ carriageStands + " стоячих");
-        } else {
-            if (freeStands > 0) {
-                System.out.println("В вагоне есть свободные места: " + freeStands + " стоячих");
-            } else {
-                System.out.println("В вагоне свободных мест нет");
-            }
+        if (passengers < carriageSeats){
+            System.out.println("В вагоне есть свободные места: " + (carriageSeats - passengers) + " сидячих и "
+                    + (carriageCapacity - carriageSeats) + " стоячих");
+        }
+        if (passengers >= carriageCapacity) {
+            System.out.println("В вагоне свободных мест нет");
+        }
+        if ((passengers >= carriageSeats) && (passengers < carriageCapacity)){
+            System.out.println("В вагоне есть свободные места: " + (carriageCapacity - passengers) + " стоячих");
         }
         //task 7
         int one = 28_937_198;//входные данные
-        int two = 9_239_857;//входные данные
+        int two = 119_239_857;//входные данные
         int three = 92_837_297;//входные данные
         if ((one > two) && (one > three)) {
             System.out.println("One is the biggest");
-        } else {
-            if (two > three) {
-                System.out.println("Two is the biggest");
-            } else {
-                System.out.println("Three is the biggest");
-            }
         }
+        if ((one < two) && (two > three)) {
+            System.out.println("Two is the biggest");
+        }
+        if ((one < three) && (two < three)) {
+            System.out.println("Three is the biggest");
+        }
+
     }
 }
